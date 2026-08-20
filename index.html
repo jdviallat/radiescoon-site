@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radiescoon — Oracle radiesthésique & cadrans énergétiques</title>
+<meta name="description" content="Radiescoon, par Bengacoon : 161 cadrans de radiesthésie répartis en 13 modules, pendule physique ou tirage intuitif, dossiers et séances avant/après. 100 % hors ligne, 9 langues.">
+<link rel="icon" href="assets/favicon.png">
+<meta property="og:title" content="Radiescoon — Oracle radiesthésique & cadrans énergétiques">
+<meta property="og:description" content="161 cadrans, 13 modules, pendule animé, journal et séances avant/après. Un compagnon de radiesthésie clair et premium.">
+<meta property="og:image" content="https://jdviallat.github.io/radiescoon-site/assets/feature-1024x500.png">
+<style>
+  :root{
+    --nuit:#1B2A4A; --nuit-fonce:#141F38; --or:#9C7A23; --or-clair:#C9A24B;
+    --sauge:#5E7355; --creme:#FBF9F3; --creme-2:#F1EBDC; --texte:#222222; --muted:#6A675E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--texte);background:var(--creme);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--creme-2)}
+  header .wrap{display:flex;align-items:center;gap:12px;height:64px}
+  header img{width:36px;height:36px;border-radius:9px}
+  header .brand{font-weight:800;font-size:19px;letter-spacing:.2px;color:var(--nuit)}
+  header .brand small{display:block;font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:600}
+  header nav a{color:var(--muted);text-decoration:none}
+  header nav a:hover{color:var(--nuit)}
+  @media(max-width:640px){header nav{display:none}}
+
+  .hero{background:linear-gradient(160deg,var(--nuit) 0%,var(--nuit-fonce) 100%);color:#fff;text-align:center;padding:72px 0 84px;position:relative;overflow:hidden}
+  .hero .orb{position:absolute;opacity:.10;background:var(--or-clair);border-radius:50%}
+  .hero .o1{width:260px;height:260px;top:-80px;left:-60px}
+  .hero .o2{width:190px;height:190px;bottom:-70px;right:-50px}
+  .hero .arc{position:absolute;left:50%;top:40px;width:520px;height:520px;margin-left:-260px;border:1px solid rgba(201,162,75,.18);border-radius:50%}
+  .hero .arc.b{width:380px;height:380px;margin-left:-190px;top:110px}
+  .hero .logo{width:98px;height:98px;border-radius:24px;box-shadow:0 12px 34px rgba(0,0,0,.32);margin-bottom:22px;position:relative}
+  .hero .par{color:var(--or-clair);font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;position:relative}
+  .hero h1{font-size:44px;line-height:1.1;font-weight:800;letter-spacing:-.5px;position:relative}
+  .hero .tagline{position:relative;color:var(--or-clair);font-style:italic;font-size:17px;margin-top:10px}
+  .hero p.lead{max-width:640px;margin:18px auto 0;font-size:18px;color:#E4E7EE;position:relative}
+  @media(max-width:640px){.hero h1{font-size:33px}.hero p.lead{font-size:16px}}
+
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;position:relative}
+  .store{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--nuit);font-weight:700;
+    padding:13px 22px;border-radius:14px;text-decoration:none;font-size:15px;box-shadow:0 6px 18px rgba(0,0,0,.20);transition:transform .15s}
+  .store:hover{transform:translateY(-2px)}
+  .store.soon{background:rgba(255,255,255,.14);color:#fff;box-shadow:none;border:1px solid rgba(255,255,255,.3)}
+  .store .em{font-size:20px}
+  .store small{display:block;font-weight:600;font-size:11px;opacity:.7}
+
+  section{padding:66px 0}
+  .eyebrow{color:var(--or);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-align:center}
+  h2{font-size:31px;font-weight:800;text-align:center;margin:8px 0 8px;letter-spacing:-.3px;color:var(--nuit)}
+  .sub{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 42px;font-size:16px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--creme-2);border-radius:18px;padding:26px 22px;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(27,42,74,.10)}
+  .card .em{font-size:30px;display:inline-block;margin-bottom:12px}
+  .card h3{font-size:18px;font-weight:800;margin-bottom:7px;color:var(--nuit)}
+  .card p{color:var(--muted);font-size:14.5px}
+
+  .modules{background:var(--creme-2)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+  .chip{background:#fff;border:1px solid #E4DCC6;color:var(--nuit);font-weight:700;font-size:14px;
+    padding:9px 16px;border-radius:999px}
+  .gabarits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:820px;margin:38px auto 0}
+  @media(max-width:640px){.gabarits{grid-template-columns:repeat(2,1fr)}}
+  .gab{background:#fff;border:1px solid #E4DCC6;border-radius:16px;padding:20px 14px;text-align:center}
+  .gab strong{display:block;color:var(--nuit);font-size:15px;margin-bottom:4px}
+  .gab span{color:var(--muted);font-size:13px}
+
+  .premium .box{background:#fff;border:1px solid #E7DFCB;border-radius:22px;padding:40px 34px;text-align:center;max-width:720px;margin:0 auto}
+  .premium .price{display:inline-block;background:var(--or);color:#fff;font-weight:800;padding:6px 16px;border-radius:999px;font-size:14px;margin-bottom:14px}
+  .premium h2{margin-top:0}
+  .premium ul{list-style:none;display:inline-block;text-align:left;margin:18px auto 0;color:var(--texte)}
+  .premium li{padding:5px 0 5px 30px;position:relative;font-size:15px}
+  .premium li::before{content:"🔮";position:absolute;left:0}
+  .premium .free{color:var(--muted);font-size:14px;margin-top:20px}
+  .pay{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .paybtn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:800;
+    font-size:15px;text-decoration:none;color:#fff;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 16px rgba(0,0,0,.16)}
+  .paybtn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.22)}
+  .paybtn.paypal{background:#0070ba}
+  .paybtn.sumup{background:#1b2a4a}
+
+  .privacy{background:var(--nuit);color:#E4E7EE;text-align:center}
+  .privacy h2{color:#fff}
+  .privacy .sub{color:#C6CEDC}
+
+  footer{background:var(--nuit-fonce);color:#B7BFCF;text-align:center;padding:40px 0;font-size:13.5px}
+  footer a{color:var(--or-clair);text-decoration:none}
+  footer .disc{max-width:680px;margin:16px auto 0;font-size:12px;color:#8D96A8;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="assets/icon.png" alt="Radiescoon">
+    <div class="brand">Radiescoon<small>par Bengacoon</small></div>
+    <nav>
+      <a href="#fonctions">Fonctions</a>
+      <a href="#cadrans">Cadrans</a>
+      <a href="#premium">Version complète</a>
+      <a href="privacy.html">Confidentialité</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <span class="orb o1"></span><span class="orb o2"></span>
+  <span class="arc"></span><span class="arc b"></span>
+  <div class="wrap">
+    <img class="logo" src="assets/icon.png" alt="Radiescoon">
+    <div class="par">par Bengacoon</div>
+    <h1>Radiescoon</h1>
+    <p class="tagline">Oracle radiesthésique &amp; cadrans énergétiques</p>
+    <p class="lead">161 cadrans réunis dans un écrin clair et premium, pour lire au pendule — physique ou intuitif — sur soi, un proche, un animal ou un lieu. Hors ligne, en 9 langues.</p>
+    <div class="stores">
+      <a class="store" href="https://github.com/jdviallat/radiescoon/releases/latest">
+        <span class="em">⬇</span><span><small>Télécharger l'APK</small>Android&nbsp;(.apk)</span>
+      </a>
+      <a class="store soon" href="#"><span class="em">▶</span><span><small>Bientôt sur</small>Google&nbsp;Play</span></a>
+      <a class="store soon" href="#"><span class="em"></span><span><small>Bientôt sur</small>App&nbsp;Store</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="fonctions">
+  <div class="wrap">
+    <div class="eyebrow">Ce que fait l'app</div>
+    <h2>La radiesthésie, posée et sérieuse</h2>
+    <p class="sub">Poser une question, laisser le pendule répondre, garder une trace. Sans compte, sans jargon, sans publicité.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="em">🕯️</span><h3>161 cadrans, 13 modules</h3>
+        <p>Humain, animaux, bilan énergétique, temps, géobiologie, âmes &amp; mémoires, mondes subtils, amour, chemin de vie, travail… Chaque cadran a sa fiche « livre » complète.</p>
+      </div>
+      <div class="card">
+        <span class="em">🔗</span><h3>Pendule physique ou intuitif</h3>
+        <p>Un grand cadran plein écran en mode paysage pour votre vrai pendule — ou un tirage intuitif où le pendule s'anime et révèle la réponse.</p>
+      </div>
+      <div class="card">
+        <span class="em">🎓</span><h3>Apprendre le pendule</h3>
+        <p>Un module débutant avec les fondamentaux : Oui / Non, Oui / Non / Peut-être, échelle 0–100 %, et les repères de lecture.</p>
+      </div>
+      <div class="card">
+        <span class="em">📔</span><h3>Journal &amp; lectures</h3>
+        <p>Enregistrez vos lectures, tenez un journal personnel et retrouvez d'un geste vos favoris et vos cadrans récemment consultés.</p>
+      </div>
+      <div class="card">
+        <span class="em">🧑‍⚕️</span><h3>Dossiers &amp; séances avant/après</h3>
+        <p>Pour les praticiens : sujets (personne, animal, lieu), photo, honoraires, rappels de suivi, séances guidées avant/après pour mesurer l'évolution.</p>
+      </div>
+      <div class="card">
+        <span class="em">📄</span><h3>Synthèses &amp; exports</h3>
+        <p>Des synthèses éditables, des modèles de séance réutilisables, et des exports PDF et Excel/CSV prêts à remettre.</p>
+      </div>
+      <div class="card">
+        <span class="em">🌸</span><h3>Fleurs de Bach &amp; pierres</h3>
+        <p>38 fleurs de Bach (7 familles + Rescue) et 50 pierres de lithothérapie intégrées, filtrables par famille, chakra ou besoin.</p>
+      </div>
+      <div class="card">
+        <span class="em">🐾</span><h3>Chakras de l'animal</h3>
+        <p>Planches chien &amp; chat — 7 chakras, brachial et secondaires — et des séances animales avant/après.</p>
+      </div>
+      <div class="card">
+        <span class="em">✏️</span><h3>Vos propres cadrans</h3>
+        <p>Créez vos cadrans à partir des gabarits : nom, segments, couleurs, aperçu en direct — puis tirez-les au pendule comme les autres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cadrans" class="modules">
+  <div class="wrap">
+    <div class="eyebrow">La bibliothèque</div>
+    <h2>Quatre gabarits, treize modules</h2>
+    <p class="sub">Chaque cadran est bâti sur l'un des quatre gabarits de lecture. Règle constante : quand un cadran propose Oui et Non, le Non est à gauche, le Oui à droite, les nuances au milieu.</p>
+    <div class="gabarits">
+      <div class="gab"><strong>Jauge</strong><span>Une mesure sur une échelle 0–100</span></div>
+      <div class="gab"><strong>Éventail</strong><span>Un choix parmi plusieurs secteurs</span></div>
+      <div class="gab"><strong>Roue</strong><span>Un choix réparti en cercle</span></div>
+      <div class="gab"><strong>Binaire</strong><span>Oui · Peut-être · Non</span></div>
+    </div>
+    <div style="height:38px"></div>
+    <div class="chips">
+      <span class="chip">Apprendre le pendule</span><span class="chip">Humain</span><span class="chip">Animaux</span>
+      <span class="chip">Bilan énergétique</span><span class="chip">Temps</span><span class="chip">Géobiologie</span>
+      <span class="chip">Âmes, karma &amp; mémoires</span><span class="chip">Mondes subtils</span><span class="chip">Auto-contrôle</span>
+      <span class="chip">Oracle des Résonances</span><span class="chip">Amour &amp; Relations</span><span class="chip">Chemin de vie</span>
+      <span class="chip">Travail &amp; Projets</span>
+    </div>
+  </div>
+</section>
+
+<section id="premium" class="premium">
+  <div class="wrap">
+    <div class="box">
+      <span class="price">Achat unique · 7,90 €</span>
+      <h2>La version complète, sans abonnement</h2>
+      <p class="sub" style="margin-bottom:6px">Tous les cadrans sont gratuits. Le premium débloque la pratique — et il est à vie.</p>
+      <ul>
+        <li>Enregistrer ses lectures et tenir un journal</li>
+        <li>Dossiers clients : personnes, animaux, lieux</li>
+        <li>Séances guidées avant/après et modèles réutilisables</li>
+        <li>Synthèses éditables + exports PDF et Excel/CSV</li>
+        <li>Coffre chiffré AES-256 et verrou biométrique</li>
+        <li>Éditeur de cadrans personnels</li>
+      </ul>
+      <p class="free">La version gratuite donne accès aux <strong>13 modules et à tous les cadrans</strong>, au pendule physique comme au tirage intuitif, aux fiches complètes, à la lecture vocale et aux favoris.</p>
+      <p class="free" style="margin-top:14px">Sur <strong>Google&nbsp;Play</strong> et l'<strong>App&nbsp;Store</strong>, la version complète s'obtient par achat intégré. Pour l'<strong>APK téléchargé</strong> (hors store), payez ici et recevez votre <strong>licence nominative à vie</strong> par email :</p>
+      <div class="pay">
+        <a class="paybtn paypal" href="https://paypal.me/hypnocoon/7.90EUR">Payer avec PayPal · 7,90&nbsp;€</a>
+        <a class="paybtn sumup" href="https://pay.sumup.com/b2c/QJZVD5JC">Payer avec SumUp · 7,90&nbsp;€</a>
+      </div>
+      <p class="free" style="margin-top:12px;font-size:13px">Après paiement, vous recevez votre licence par email — vous la collez dans l'app (<em>Réglages → Version complète</em>), débloquée à vie et hors&#8209;ligne. Une question ? <a href="mailto:info@hypnocoon.com" style="color:var(--or)">info@hypnocoon.com</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="confidentialite" class="privacy">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--or-clair)">Vos données, chez vous</div>
+    <h2>Rien ne quitte votre téléphone</h2>
+    <p class="sub">Dossiers, séances et notes restent stockés uniquement sur votre appareil. Aucun compte à créer, aucune donnée personnelle transmise. Les sauvegardes exportées peuvent être chiffrées par mot de passe (coffre AES-256), et l'app se verrouille par biométrie ou code.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Radiescoon</strong> — par Bengacoon · Disponible en 9 langues<br>
+    <a href="privacy.html">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
+    <p class="disc">Radiescoon est une application de bien-être et d'exploration intérieure. La radiesthésie est présentée comme une tradition symbolique : elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace jamais l'avis d'un professionnel de santé (humain ou vétérinaire).</p>
+  </div>
+</footer>
+
+</body>
+</html>
