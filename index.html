@@ -117,7 +117,17 @@
   .vlist{list-style:none;margin:0;padding:0}
   .vlist li{position:relative;padding:4px 0 4px 22px;color:var(--texte);font-size:14.5px}
   .vlist li::before{content:"◈";position:absolute;left:0;top:5px;color:var(--or-clair);font-size:12px}
-#rc-lang{background:transparent;border:1px solid var(--creme-2);border-radius:8px;padding:5px 8px;font:inherit;font-size:13px;color:var(--muted);cursor:pointer;margin-left:6px}</style></head><body><header><div class="wrap">
+#rc-lang{background:transparent;border:1px solid var(--creme-2);border-radius:8px;padding:5px 8px;font:inherit;font-size:13px;color:var(--muted);cursor:pointer;margin-left:6px}
+  /* Contact & assistance */
+  .bgc-contact{padding:52px 0;border-top:1px solid rgba(128,128,128,.22)}
+  .bgc-contact .bgc-box{max-width:640px;margin:0 auto;text-align:center;border:1px solid rgba(128,128,128,.28);border-radius:18px;padding:30px 26px;background:rgba(127,127,127,.05)}
+  .bgc-contact h2{font-size:22px;font-weight:800;margin:0 0 8px}
+  .bgc-contact p{font-size:15px;line-height:1.6;margin:0 0 6px;opacity:.85}
+  .bgc-contact p .k{font-weight:700;opacity:1}
+  .bgc-contact .bgc-mail{display:inline-block;margin-top:18px;padding:13px 26px;border-radius:999px;font-weight:800;font-size:15.5px;text-decoration:none;background:var(--or,var(--gold,#C9A86A));color:#1B1B1B;border:1px solid rgba(0,0,0,.12)}
+  .bgc-contact .bgc-mail:hover{filter:brightness(1.07)}
+  .bgc-contact .bgc-addr{display:block;margin-top:11px;font-size:13px;opacity:.65}
+</style></head><body><header><div class="wrap">
   <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none"><img src="assets/icon.png" alt="Radiescoon"><div class="brand">Radiescoon<small data-i18n="hero.by">par Bengacoon</small></div></a>
   <nav>
     <a href="index.html#fonctions" data-i18n="nav.features">Fonctions</a>
@@ -163,5 +173,18 @@
   <p class="free" style="margin-top:12px;font-size:13px" data-i18n="pr.after">·</p>
 </div></div></section>
 <section id="confidentialite" class="privacy"><div class="wrap"><div class="eyebrow" style="color:var(--or-clair)" data-i18n="pv.eyebrow">·</div><h2 data-i18n="pv.h2">·</h2><p class="sub" data-i18n="pv.sub">·</p></div></section>
+
+<section class="bgc-contact" id="contact">
+  <div class="wrap">
+    <div class="bgc-box">
+      <h2>Contact &amp; assistance</h2>
+      <p>Merci de <span class="k">préciser de quelle application</span> vous parlez — ici <span class="k">Radiescoon</span>, déjà indiqué dans le message.</p>
+      <p>Et de préciser s'il s'agit d'un <span class="k">renseignement</span>, d'un <span class="k">bug</span> ou d'une <span class="k">proposition de nouvelle fonctionnalité</span>.</p>
+      <a class="bgc-mail" href="mailto:info@bengacoon.com?subject=Radiescoon%20%E2%80%94%20&body=Application%20%3A%20Radiescoon%0D%0AType%20de%20demande%20%3A%20renseignement%20%2F%20bug%20%2F%20proposition%20de%20fonctionnalit%C3%A9%0D%0A%0D%0AVotre%20message%20%3A%0D%0A">✉️ Écrire à l'assistance</a>
+      <span class="bgc-addr">info@bengacoon.com</span>
+    </div>
+  </div>
+</section>
+
 <footer><div class="wrap"><strong>Radiescoon</strong> — <span data-i18n="ft.line">par Bengacoon · Disponible en 9 langues</span><br><a href="privacy.html" data-i18n="ft.privacy">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon<p class="disc" data-i18n="ft.disc">·</p></div></footer>
 <script src="assets/i18n.js"></script></body></html>
